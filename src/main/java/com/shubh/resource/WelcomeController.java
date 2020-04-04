@@ -14,8 +14,8 @@ public class WelcomeController {
 	private static  org.slf4j.Logger logger=LoggerFactory.getLogger(WelcomeController.class);
 	@GetMapping(value="/greet/{name}")
 	public String greetMsg(@PathVariable("name") String name) {
-		logger.debug("start  method execution");
-		logger.debug("end method execution");
+		logger.info("start  method execution");
+		logger.info("end method execution");
 		return "good evening:"+name;
 	}
 	
