@@ -1,5 +1,7 @@
 package com.shubh;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -8,9 +10,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
 
+	@PostConstruct
+	public void init() {
+		logger.info("main start execution");
+
+	}
 	private static Logger logger=LoggerFactory.getLogger(Application.class);
 	public static void main(String[] args) {
-		logger.info("main start execution");
 		SpringApplication.run(Application.class, args);
 	}
 
